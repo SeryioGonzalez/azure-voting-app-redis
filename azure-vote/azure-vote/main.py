@@ -37,6 +37,8 @@ try:
     else:
         r = redis.Redis(redis_server)
     r.ping()
+
+    print("Connected to Redis DB")
 except redis.ConnectionError:
     exit('Failed to connect to Redis, terminating.')
 
